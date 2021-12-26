@@ -3,5 +3,5 @@
 Run in **cmd.exe**
 
 ```
-create_random_input.py > input.dat && happy_golf.py < input.dat
+create_random_input.py > happy_golf.random.input && happy_golf.py < happy_golf.random.input > happy_golf.random.output
 ```
