@@ -1,3 +1,8 @@
+import random
+import time
+import sys
+from string import ascii_letters
+
 pemain_golf = []
 
 kode = {'QD': 4, 'TP': 3, 'DB': 2, 'BG': 1,
@@ -39,6 +44,16 @@ def rerata(pemain_golf):
     return tmp_total_skor/len(pemain_golf)
 
 
+def printerr(*args, sep=' ', end='\n'):
+    print(sep.join(args), end=end, file=sys.stderr)
+
+
+def customprint(*args, sep=' ', end='\n', isOut=False):
+    if isOut:
+        printerr(sep.join(args), end=end)
+    print(sep.join(args), end=end)
+
+
 def table_sep(len_column_1, len_column_2):
     print('+', '-'*(len_column_1+2), '+', '-'*(len_column_2+2), '+', sep='')
 
@@ -66,27 +81,37 @@ def table(pemain_golf, header1, header2):
     table_sep(len_column_1, len_column_2)
 
 
-# def print_pemenang():
+def print_pemenang(pemain_golf):
+    printerr('\n\nPemenangnya adalah:')
+    winner = pemenang(pemain_golf)
+    len_w = len(winner)
+    for i in range(15):
+        printerr(''.join(random.choice(ascii_letters)
+                         for _ in range(random.randint(1, len_w))).ljust(len_w), end='\r')
+        time.sleep(0.1)
+    print(winner)
 
 
 # Interactive
 def main():
-    print('''
+    printerr('''
     ██╗░░██╗░█████╗░██████╗░██████╗░██╗░░░██╗  ░██████╗░░█████╗░██╗░░░░░███████╗
     ██║░░██║██╔══██╗██╔══██╗██╔══██╗╚██╗░██╔╝  ██╔════╝░██╔══██╗██║░░░░░██╔════╝
     ███████║███████║██████╔╝██████╔╝░╚████╔╝░  ██║░░██╗░██║░░██║██║░░░░░█████╗░░
     ██╔══██║██╔══██║██╔═══╝░██╔═══╝░░░╚██╔╝░░  ██║░░╚██╗██║░░██║██║░░░░░██╔══╝░░
     ██║░░██║██║░░██║██║░░░░░██║░░░░░░░░██║░░░  ╚██████╔╝╚█████╔╝███████╗██║░░░░░
     ╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░░░░╚═╝░░░░░░░░╚═╝░░░  ░╚═════╝░░╚════╝░╚══════╝╚═╝░░░░░''')
-    print('\n\nDaftar Pemain')
+    printerr('\n\nDaftar Pemain')
     table(pemain_golf, 'Player Name', 'Score')
+    print_pemenang(pemain_golf)
+    printerr('\n\nRata - rata seluruh pemain golf:')
+    print(rerata(pemain_golf))
 
-    print('\n\nPemenangnya adalah:')
-    print('\r')
+
+# main()
 
 
-main()
+if '>' in sys.argv:
+    isOut = True
 
-# print(pemain_golf)
-# print(pemenang(pemain_golf))
-# print(rerata(pemain_golf))
+customprint('Hello')
