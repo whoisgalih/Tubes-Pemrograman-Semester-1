@@ -48,12 +48,6 @@ def printerr(*args, sep=' ', end='\n'):
     print(sep.join(args), end=end, file=sys.stderr)
 
 
-def customprint(*args, sep=' ', end='\n', isOut=False):
-    if isOut:
-        printerr(sep.join(args), end=end)
-    print(sep.join(args), end=end)
-
-
 def table_sep(len_column_1, len_column_2):
     print('+', '-'*(len_column_1+2), '+', '-'*(len_column_2+2), '+', sep='')
 
@@ -108,10 +102,4 @@ def main():
     print(rerata(pemain_golf))
 
 
-# main()
-
-
-if '>' in sys.argv:
-    isOut = True
-
-customprint('Hello')
+main()
