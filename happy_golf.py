@@ -66,6 +66,9 @@ def table(pemain_golf, header1, header2):
     table_sep(len_column_1, len_column_2)
 
 
+# def print_pemenang():
+
+
 # Interactive
 def main():
     print('''
@@ -77,6 +80,9 @@ def main():
     ╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░░░░╚═╝░░░░░░░░╚═╝░░░  ░╚═════╝░░╚════╝░╚══════╝╚═╝░░░░░''')
     print('\n\nDaftar Pemain')
     table(pemain_golf, 'Player Name', 'Score')
+
+    print('\n\nPemenangnya adalah:')
+    print('\r')
 
 
 main()
