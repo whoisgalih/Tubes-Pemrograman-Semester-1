@@ -11,15 +11,29 @@ kode = {'QD': 4, 'TP': 3, 'DB': 2, 'BG': 1,
 try:
     while True:
         text = input().split()
-        nilai = 0
-        for skor in text[1:]:
+        data_pemain = {
+            'nama': text[0]
+        }
+        for nomor, skor in enumerate(text[1:], 1):
             if skor == 'ACE':
-                nilai += 1
+                data_pemain[f'hole{nomor}'] = 1
             else:
-                nilai += 5 + kode[skor]
-        pemain_golf.append({text[0]: nilai})
+                data_pemain[f'hole{nomor}'] = 5 + kode[skor]
+        pemain_golf.append(data_pemain)
 except EOFError:
     pass
+
+
+def total_skor(pemain_golf):
+    tmp = []
+    for pemain in pemain_golf:
+        skor = 0
+        for hole in list(pemain)[1:]:
+            skor += pemain[hole]
+        tmp.append({
+            pemain['nama']: skor
+        })
+    return tmp
 
 
 def pemenang(pemain_golf):
@@ -86,8 +100,7 @@ def print_pemenang(pemain_golf):
     print(winner)
 
 
-# Interactive
-def main():
+def print_judul():
     printerr('''
     ██╗░░██╗░█████╗░██████╗░██████╗░██╗░░░██╗  ░██████╗░░█████╗░██╗░░░░░███████╗
     ██║░░██║██╔══██╗██╔══██╗██╔══██╗╚██╗░██╔╝  ██╔════╝░██╔══██╗██║░░░░░██╔════╝
@@ -95,6 +108,14 @@ def main():
     ██╔══██║██╔══██║██╔═══╝░██╔═══╝░░░╚██╔╝░░  ██║░░╚██╗██║░░██║██║░░░░░██╔══╝░░
     ██║░░██║██║░░██║██║░░░░░██║░░░░░░░░██║░░░  ╚██████╔╝╚█████╔╝███████╗██║░░░░░
     ╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░░░░╚═╝░░░░░░░░╚═╝░░░  ░╚═════╝░░╚════╝░╚══════╝╚═╝░░░░░''')
+
+
+# Interactive
+def main():
+    global pemain_golf
+    print_judul()
+    print(pemain_golf)
+    pemain_golf = total_skor(pemain_golf)
     printerr('\n\nDaftar Pemain')
     table(pemain_golf, 'Player Name', 'Score')
     print_pemenang(pemain_golf)
