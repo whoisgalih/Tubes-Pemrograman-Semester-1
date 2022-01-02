@@ -10,9 +10,9 @@ def baca_data_input():
             }
             for nomor, skor in enumerate(text[1:], 1):
                 if skor == 'ACE':
-                    data_pemain[f'hole{nomor}'] = 1
+                    data_pemain[f'Hole {nomor}'] = 1
                 else:
-                    data_pemain[f'hole{nomor}'] = 5 + kode[skor]
+                    data_pemain[f'Hole {nomor}'] = 5 + kode[skor]
             pemain_golf.append(data_pemain)
     except EOFError:
         pass

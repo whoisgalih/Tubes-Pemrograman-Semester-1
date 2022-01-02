@@ -28,3 +28,11 @@ def print_judul():
 ██╔══██║██╔══██║██╔═══╝░██╔═══╝░░░╚██╔╝░░  ██║░░╚██╗██║░░██║██║░░░░░██╔══╝░░
 ██║░░██║██║░░██║██║░░░░░██║░░░░░░░░██║░░░  ╚██████╔╝╚█████╔╝███████╗██║░░░░░
 ╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░░░░╚═╝░░░░░░░░╚═╝░░░  ░╚═════╝░░╚════╝░╚══════╝╚═╝░░░░░''')
+
+
+def print_nama(pemain_golf):
+    for data_pemain in pemain_golf:
+        print(data_pemain['nama'])
+        data_pemain.pop('nama')
+        for k, v in data_pemain.items():
+            print(k, '\t :', v)
