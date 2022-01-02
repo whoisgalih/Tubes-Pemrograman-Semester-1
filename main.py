@@ -4,7 +4,7 @@ from happy_golf import total_skor, rerata, baca_data_input
 from time import sleep
 
 
-# Interactive
+# Buatlah main program yang digunakan untuk menampilkan list dan memanggil fungsi yang dibuat.
 def main(pemain_golf):
     print_judul()
 
