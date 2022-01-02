@@ -5,6 +5,7 @@ def baca_data_input():
 
     file = open('happy_golf.input', 'r')
     texts = file.readlines()
+    file.close()
 
     for text in texts:
         text = text.split()
