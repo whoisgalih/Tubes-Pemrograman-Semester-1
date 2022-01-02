@@ -2,20 +2,21 @@ def baca_data_input():
     pemain_golf = []
     kode = {'QD': 4, 'TP': 3, 'DB': 2, 'BG': 1,
             'PAR': 0, 'BR': -1, 'EG': -2, 'AL': -3, 'CN': -4}
-    try:
-        while True:
-            text = input().split()
-            data_pemain = {
-                'nama': text[0]
-            }
-            for nomor, skor in enumerate(text[1:], 1):
-                if skor == 'ACE':
-                    data_pemain[f'Hole {nomor}'] = 1
-                else:
-                    data_pemain[f'Hole {nomor}'] = 5 + kode[skor]
-            pemain_golf.append(data_pemain)
-    except EOFError:
-        pass
+
+    file = open('happy_golf.input', 'r')
+    texts = file.readlines()
+
+    for text in texts:
+        text = text.split()
+        data_pemain = {
+            'nama': text[0]
+        }
+        for nomor, skor in enumerate(text[1:], 1):
+            if skor == 'ACE':
+                data_pemain[f'Hole {nomor}'] = 1
+            else:
+                data_pemain[f'Hole {nomor}'] = 5 + kode[skor]
+        pemain_golf.append(data_pemain)
     return pemain_golf
 
 

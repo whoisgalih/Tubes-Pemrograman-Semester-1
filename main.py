@@ -1,6 +1,7 @@
 from print import *
 from table import table
 from happy_golf import total_skor, rerata, baca_data_input
+from time import sleep
 
 
 # Interactive
@@ -22,6 +23,7 @@ def main(pemain_golf):
     # Pemenang
     pemain_golf = total_skor(pemain_golf)
     print_pemenang(pemain_golf)
+    sleep(3)
 
     print('\n\nDaftar Pemain')
     table({
