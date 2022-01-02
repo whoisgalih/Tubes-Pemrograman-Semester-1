@@ -8,9 +8,21 @@ def main(pemain_golf):
     print_judul()
     print_nama(pemain_golf)
     print(pemain_golf)
+
+    # Print data
+    data_table = {
+        'Holes': [hole for hole in list(pemain_golf[0])[1:]]
+    }
+    for data_pemain in pemain_golf:
+        data_table[data_pemain['nama']] = list(data_pemain.values())[1:]
+
+    table(data_table)
     pemain_golf = total_skor(pemain_golf)
     print('\n\nDaftar Pemain')
-    table(pemain_golf, 'Player Name', 'Score')
+    table({
+        'Player Name': [list(pemain.keys())[0] for pemain in pemain_golf],
+        'Score': [list(pemain.values())[0] for pemain in pemain_golf]
+    })
     print_pemenang(pemain_golf)
     print('\n\nRata - rata seluruh pemain golf:')
     print(rerata(pemain_golf))
