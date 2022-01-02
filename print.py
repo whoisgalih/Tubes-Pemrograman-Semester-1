@@ -36,3 +36,4 @@ def print_nama(pemain_golf):
         data_pemain.pop('nama')
         for k, v in data_pemain.items():
             print(k, '\t :', v)
+        print()
