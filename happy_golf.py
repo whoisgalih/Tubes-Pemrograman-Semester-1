@@ -20,6 +20,10 @@ def baca_data_input():
 
 
 def total_skor(pemain_golf):
+    '''
+    Fungsi total_skor mengembalikan list yang berisi 
+    dictionary dengan key nama pemain dan value skor pemain
+    '''
     tmp = []
     for pemain in pemain_golf:
         skor = 0
@@ -44,8 +48,9 @@ def pemenang(pemain_golf):
 def rerata(pemain_golf):
     '''
     Fungsi unutk mencari rata-rata skor pemain golf
-    Parameter:
 
+    Dengan pameter berupa list yang berisi dictionary dengan 
+    key nama pemain dan value skor pemain
     '''
     tmp_total_skor = 0
     for x in pemain_golf:
