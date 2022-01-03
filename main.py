@@ -8,6 +8,7 @@ from time import sleep
 def main():
     # Print judul
     print_judul()
+    print('Happy Golf')
 
     # Memsukan input
     pemain_golf = baca_data_input(file_input())
