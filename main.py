@@ -1,10 +1,10 @@
-from program.print import *
+from program.print import print_pemenang, print_judul, file_input
 from program.table import table
 from program.happy_golf import total_skor, rerata, baca_data_input
 from time import sleep
 
 
-# Buatlah main program yang digunakan untuk menampilkan list dan memanggil fungsi yang dibuat.
+# d. Buatlah main program yang digunakan untuk menampilkan list dan memanggil fungsi yang dibuat.
 def main():
     # Print judul
     print_judul()
@@ -28,7 +28,7 @@ def main():
     # Print Pemenang
     pemain_golf = total_skor(pemain_golf)
     print_pemenang(pemain_golf)
-    sleep(3)
+    sleep(1)
 
     # Print Daftar Pemain
     print('\n\nDaftar Pemain')

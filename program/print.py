@@ -49,19 +49,19 @@ def file_input():
     3. File teks costom
     4. Input CLI
     '''
-    inputan = input('''Ingin input file dari mana? 
+    kode_file = input('''Ingin input file dari mana? 
 [1] Input dari tugas
 [2] Buat input random melalui create_random_input.py
 [3] File teks costom
 [4] Input CLI
 
 Ketik angka: ''')
-    if inputan == '1':
+    if kode_file == '1':
         return 'text/happy_golf.input'
-    elif inputan == '2':
+    elif kode_file == '2':
         create_random_input()
         return 'text/happy_golf.random.input'
-    elif inputan == '3':
+    elif kode_file == '3':
         return input('Masukan alamat file: ')
     else:
         line = input()
