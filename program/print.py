@@ -51,13 +51,14 @@ def file_input():
     3. File teks costom
     4. Input CLI
     '''
-    kode_file = input('''Ingin input file dari mana? 
+    printerr('''Ingin input file dari mana? 
 [1] Input dari tugas
 [2] Buat input random melalui create_random_input.py
 [3] File teks costom
 [4] Input CLI
 
-Ketik angka: ''')
+Ketik angka: ''', end='')
+    kode_file = input()
     if kode_file == '1':
         return 'text/happy_golf.input'
     elif kode_file == '2':

@@ -41,6 +41,6 @@ def create_random_input():
 
         baris2.append(' '.join(baris))
 
-    file = open('./text/happy_golf.random.input2', 'w')
+    file = open('./text/happy_golf.random.input', 'w')
     file.write('\n'.join(baris2))
     file.close()
