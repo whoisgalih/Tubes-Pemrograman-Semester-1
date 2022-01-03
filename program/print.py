@@ -7,10 +7,16 @@ from program.create_random_input import create_random_input
 
 
 def printerr(*args, sep=' ', end='\n'):
+    '''
+    Membantu print dalam file stderr
+    '''
     print(sep.join(args), end=end, file=stderr)
 
 
 def print_pemenang(pemain_golf):
+    '''
+    Mencetak nama pemenenang dengan animasi random letters
+    '''
     print('\n\nPemenangnya adalah:')
     winner = pemenang(pemain_golf)
     len_w = len(winner)
@@ -22,6 +28,9 @@ def print_pemenang(pemain_golf):
 
 
 def print_judul():
+    '''
+    Mencetak judul HAPPY GOLF
+    '''
     printerr('''
     ██╗  ██╗ █████╗ ██████╗ ██████╗ ██╗   ██╗   ██████╗  █████╗ ██╗     ███████╗
     ██║  ██║██╔══██╗██╔══██╗██╔══██╗╚██╗ ██╔╝  ██╔════╝ ██╔══██╗██║     ██╔════╝
@@ -33,6 +42,13 @@ def print_judul():
 
 
 def file_input():
+    '''
+    Memberi pilihan dari mana program akan membaca file yang diinputkan yang terdiri dari 4 pilihan:
+    1. Input dari tugas yang diberi oleh dosen
+    2. Buat input random melalui create_random_input.py
+    3. File teks costom
+    4. Input CLI
+    '''
     inputan = input('''Ingin input file dari mana? 
 [1] Input dari tugas
 [2] Buat input random melalui create_random_input.py
