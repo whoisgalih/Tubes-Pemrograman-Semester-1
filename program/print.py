@@ -2,8 +2,8 @@ from random import choice, randint
 from time import sleep
 from sys import stderr
 from string import ascii_letters
-from happy_golf import pemenang
-from create_random_input import create_random_input
+from program.happy_golf import pemenang
+from program.create_random_input import create_random_input
 
 
 def printerr(*args, sep=' ', end='\n'):

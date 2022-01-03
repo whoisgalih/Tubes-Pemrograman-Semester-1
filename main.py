@@ -1,6 +1,6 @@
-from print import *
-from table import table
-from happy_golf import total_skor, rerata, baca_data_input
+from program.print import *
+from program.table import table
+from program.happy_golf import total_skor, rerata, baca_data_input
 from time import sleep
 
 
