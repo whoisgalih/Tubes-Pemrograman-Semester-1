@@ -2,8 +2,6 @@
 # Setiap dictionary digunakan untuk menyimpan nama
 # peserta dan skor peserta di semua holes.
 # Gunakan tipe data terstruktur ini untuk proses pada fungsi yang diminta di bawah ini.
-
-
 def baca_data_input(file_input):
     pemain_golf = []
     kode = {'QD': 4, 'TP': 3, 'DB': 2, 'BG': 1,
@@ -27,6 +25,7 @@ def baca_data_input(file_input):
     return pemain_golf
 
 
+# Fungsi Pembantu
 def total_skor(pemain_golf):
     '''
     Fungsi total_skor mengembalikan list yang berisi 
