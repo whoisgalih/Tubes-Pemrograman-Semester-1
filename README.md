@@ -38,7 +38,7 @@ File **table.py** membantu untuk mencetak tabel yang scalable. Table memiliki pa
 File **print.py** berisi fungsi pembantu untuk mencetak:
 
 1. `printerr(...)` mempersingkat mencetak suatu kalimat/kata dalam file stderr
-2. `print_pemenang(...)` mencetak nama pemenang dengan animasi random karakter kemudian memperlihatkan nama pemenang
+2. `print_pemenang(...)` mencetak nama pemenang dengan animasi random karakter
 3. `print_judul()` mencetak ascii art dari judul
 4. `file_input()` memberi pilihan dari mana program akan membaca file yang diinputkan yang terdiri dari 4 pilihan:
    1. Input dari tugas yang diberi oleh dosen
