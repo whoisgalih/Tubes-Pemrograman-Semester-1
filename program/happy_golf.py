@@ -2,12 +2,14 @@
 # Setiap dictionary digunakan untuk menyimpan nama
 # peserta dan skor peserta di semua holes.
 # Gunakan tipe data terstruktur ini untuk proses pada fungsi yang diminta di bawah ini.
-def baca_data_input():
+
+
+def baca_data_input(file_input):
     pemain_golf = []
     kode = {'QD': 4, 'TP': 3, 'DB': 2, 'BG': 1,
             'PAR': 0, 'BR': -1, 'EG': -2, 'AL': -3, 'CN': -4}
 
-    file = open('happy_golf.input', 'r')
+    file = open(file_input, 'r')
     texts = file.readlines()
     file.close()
 
@@ -40,9 +42,8 @@ def total_skor(pemain_golf):
         })
     return tmp
 
+
 # b. Buatlah fungsi pemenang untuk mengembalikan (return) peserta ke berapa yang menjadi pemenang.
-
-
 def pemenang(pemain_golf):
     '''
     Mengembalikan nama pemenang
@@ -55,9 +56,8 @@ def pemenang(pemain_golf):
     pemenang = list(pemain_golf[index_pemenang].keys())[0]
     return pemenang
 
+
 # c. Buatlah fungsi rerata yang digunakan untuk mengembalikan (return) rata-rata skor semua pemain.
-
-
 def rerata(pemain_golf):
     '''
     Fungsi unutk mencari rata-rata skor pemain golf
