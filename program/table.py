@@ -1,25 +1,38 @@
 def table_sep(len_columns):
+    '''
+    Membuat pemisah tabel dengan argumen berupa panjang kolom-kolom
+    '''
     for len_column in len_columns:
         print('+', '-'*(len_column+2), sep='', end='')
     print('+')
 
 
 def table_body(bodies, len_columns):
+    '''
+    Membuat baris tabel
+    '''
     for len_column, body in zip(len_columns, bodies):
-        if isinstance(body, int):
-            print('|', str(body).rjust(len_column), end=' ')
+        body = str(body)
+        if body.isnumeric():
+            print('|', body.rjust(len_column), end=' ')
         else:
-            print('|', str(body).ljust(len_column), end=' ')
+            print('|', body.ljust(len_column), end=' ')
     print('|')
 
 
 def table_header(headers, len_columns):
+    '''
+    Membuat baris judul tabel
+    '''
     for idx, header in enumerate(headers):
         print('|', str(header).center(len_columns[idx]), end=' ')
     print('|')
 
 
 def table(kwargs):
+    '''
+    Membuat tabel dengan argumen berupa dictionary dengan key judul kolom dan value isi (body) kolom
+    '''
     headers = list(kwargs)
     len_columns = list()
     for k, v in kwargs.items():
