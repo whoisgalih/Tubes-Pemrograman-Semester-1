@@ -65,7 +65,8 @@ Ketik angka: ''', end='')
         create_random_input()
         return 'text/happy_golf.random.input'
     elif kode_file == '3':
-        return input('Masukan alamat file: ')
+        printerr('Masukan alamat file: ', end='\n')
+        return input()
     else:
         line = input()
         lines = ''
