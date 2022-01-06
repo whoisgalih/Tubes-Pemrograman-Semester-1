@@ -31,7 +31,7 @@ def table_header(headers, len_columns):
 
 def table(kwargs):
     '''
-    Membuat tabel dengan argumen berupa dictionary dengan key judul kolom dan value isi (body) kolom
+    Membuat tabel scalable dengan argumen berupa dictionary dengan key judul kolom dan value isi (body) kolom
     '''
     headers = list(kwargs)
     len_columns = list()
