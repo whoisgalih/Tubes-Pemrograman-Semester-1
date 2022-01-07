@@ -27,7 +27,7 @@ def print_pemenang(pemain_golf):
     len_w = len(winner)
 
     # Lopping untuk print huruf acak dalam baris yang sama yang akan me-reveal nama pemenang
-    for i in range(30):
+    for i in range(15):
         printerr(''.join(choice(ascii_letters)
                          for _ in range(randint(1, len_w))).ljust(len_w), end='\r')
         # sleep selama 0.1s untuk memperindah animasi
@@ -39,7 +39,7 @@ def print_pemenang(pemain_golf):
 
 def print_judul():
     '''
-    Mencetak judul HAPPY GOLF di CLI saja agar menghindari error ASCII string
+    Mencetak judul HAPPY GOLF di CLI saja agar menghindari error ASCII string saat di simpan ke dalam file
     '''
     printerr('''
     ██╗  ██╗ █████╗ ██████╗ ██████╗ ██╗   ██╗   ██████╗  █████╗ ██╗     ███████╗
