@@ -10,6 +10,12 @@ def main():
     print_judul()
     print('Happy Golf')
 
+    # Print identitas
+    print('''Nama \t: Galih Akbar Nugraha
+    Kelas \t: IF-45-07
+    NIM \t: 1301213060
+    ''')
+
     # Memsukan input
     pemain_golf = baca_data_input(file_input())
 
