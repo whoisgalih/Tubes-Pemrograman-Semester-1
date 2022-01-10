@@ -64,28 +64,15 @@ def pemenang(skor_pemain):
     '''
     Mengembalikan nama pemenang
     '''
+    # Mensortir list skor pemain yang berisi dictionary berdasarkan value dari dictionary
+    # Disini agar mempermudah mensortir data menggunakan lamba (anonymus function alias fungsi tanpa nama)
+    # yang langsung dipanggil dan mengembalikan value dari dictionary
+    # Fungsi sort mengembalikan item dalam list
     sorted_winner = sorted(skor_pemain, key=lambda pemain: list(
         pemain.values())[0], reverse=True)
 
+    # Mengembailkan dictinary pemain terbanyak skornya
     return (sorted_winner[0], sorted_winner[1], sorted_winner[2])
-
-    # Membuat list kosong yang akan berisi daftar skor setiap pemain
-    tmp_skor = list()
-
-    # Looping untuk menambahkan skor tiap pemain ke list tmp_skor
-    for pemain in skor_pemain:
-        tmp_skor.append(list(pemain.values())[0])
-
-    # Mengambil nilai maksimum pemenang
-    skor_pemenang = max(tmp_skor)
-
-    # Mengambil index nilai maksimum pemenang
-    index_pemenang = tmp_skor.index(skor_pemenang)
-
-    # Mengambil nama pemenang
-    pemenang = list(skor_pemain[index_pemenang].keys())[0]
-
-    return pemenang
 
 
 # c. Buatlah fungsi rerata yang digunakan untuk mengembalikan (return) rata-rata skor semua pemain.

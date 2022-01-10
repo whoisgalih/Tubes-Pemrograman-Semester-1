@@ -28,8 +28,14 @@ def print_pemenang(pemain_golf):
 
     # Animasi
     for juara in para_pemenang:
+        # Print juara ke-x
         print(f'Juara {urut}:')
+
+        # Mengambil nama juara
         nama_juara = list(juara.keys())[0]
+
+        # Animasi
+        # Mengambil panjnag nama juara untuk keperluan animasi
         len_w = len(nama_juara)
 
         # Lopping untuk print huruf acak dalam baris yang sama yang akan me-reveal nama pemenang
