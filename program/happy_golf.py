@@ -3,14 +3,14 @@
 # peserta dan skor peserta di semua holes.
 # Gunakan tipe data terstruktur ini untuk proses pada fungsi yang diminta di bawah ini.
 def baca_data_input(file_input):
-    # Membuat dictionar dengan key kode skor dan value skor
-    kode = {'QD': 4, 'TP': 3, 'DB': 2, 'BG': 1,
-            'PAR': 0, 'BR': -1, 'EG': -2, 'AL': -3, 'CN': -4}
-
     # Membaca file
     file = open(file_input, 'r')
     texts = file.readlines()
     file.close()
+
+    # Membuat dictionary dengan key kode skor dan value skor
+    kode = {'QD': 4, 'TP': 3, 'DB': 2, 'BG': 1,
+            'PAR': 0, 'BR': -1, 'EG': -2, 'AL': -3, 'CN': -4}
 
     # Membuat list kosong
     pemain_golf = []
@@ -68,8 +68,8 @@ def pemenang(skor_pemain):
     tmp_skor = list()
 
     # Looping untuk menambahkan skor tiap pemain ke list tmp_skor
-    for x in skor_pemain:
-        tmp_skor.append(list(x.values())[0])
+    for pemain in skor_pemain:
+        tmp_skor.append(list(pemain.values())[0])
 
     # Mengambil nilai maksimum pemenang
     skor_pemenang = max(tmp_skor)

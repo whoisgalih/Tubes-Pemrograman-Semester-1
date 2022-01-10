@@ -20,14 +20,15 @@ NIM \t: 1301213060
     pemain_golf = baca_data_input(file_input())
 
     # Mempersiapkan data pemain
+    # Mencari data terpanjang
     jumlah_data = [len(data_pemain) for data_pemain in pemain_golf]
     terpanjang = max(jumlah_data)
     index_data_pemain_terpanjang = jumlah_data.index(terpanjang)
     data_table = {
-        'Holes': [hole for hole in list(pemain_golf[index_data_pemain_terpanjang])[1:]]
+        'Holes': [hole for hole in list(pemain_golf[index_data_pemain_terpanjang])[1:]] # Mengambil key (hole) dari dictionary terpanjang
     }
     for data_pemain in pemain_golf:
-        data_table[data_pemain['nama']] = list(data_pemain.values())[1:]
+        data_table[data_pemain['nama']] = list(data_pemain.values())[1:] # Mnegambil setiap skor pemain
 
     # Print tabel data pemain
     print('\n\nData Pemain')

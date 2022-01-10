@@ -1,9 +1,22 @@
 # Tubes Pemrograman Semester 1
 
-| Nama  | Galih Akbar Nugraha |
-| ----- | ------------------- |
-| NIM   | 1301213060          |
-| Kelas | IF-45-07            |
+| Nama                         | Galih Akbar Nugraha |
+| ---------------------------- | ------------------- |
+| NIM                          | 1301213060          |
+| Kelas                        | IF-45-07            |
+| Dosen Pengenalan Pemrograman | Jimmy Tirtawangsa   |
+| Nomor Soal                   | 35                  |
+
+## Inputan:
+
+```
+PRAS PAR BR BR EG TR BG PAR CN ACE QD TR TR DB PAR TR BR EG AL
+SAID BR BR BG BG BG PAR DB TR TR QD TR DB PAR BR EG AL CN ACE
+VANIE ACE PAR PAR BR BG PAR BR BR BG BG BG BR PAR PAR PAR BR BR BG
+FARAH DB AL TP BR EG AL BG CN AL AL BG CN EG AL AL BR ACE QD
+BUNYAMIN DB DB QD BR BR BG DB EG BR BG TP QD DB CN AL TP BR PAR
+SELLY CN EG TP QD EG DB EG DB PAR QD ACE PAR BR QD CN BG PAR ACE
+```
 
 ## main.py
 
