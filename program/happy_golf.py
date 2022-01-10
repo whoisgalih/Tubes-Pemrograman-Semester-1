@@ -64,6 +64,11 @@ def pemenang(skor_pemain):
     '''
     Mengembalikan nama pemenang
     '''
+    sorted_winner = sorted(skor_pemain, key=lambda pemain: list(
+        pemain.values())[0], reverse=True)
+
+    return (sorted_winner[0], sorted_winner[1], sorted_winner[2])
+
     # Membuat list kosong yang akan berisi daftar skor setiap pemain
     tmp_skor = list()
 

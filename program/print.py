@@ -17,24 +17,33 @@ def print_pemenang(pemain_golf):
     '''
     Mencetak nama pemenenang dengan animasi random letters
     '''
-    print('\n\nPemenangnya adalah:')
+    print('\n\n')
+    print('Pemenangnya adalah:', '\n')
+
+    # Mendeklarasikan variabel unutk mencetak nomor urut juara
+    urut = 1
 
     # Mengambil nama pemenang menggunakan fungsi pemenenang(...)
-    winner = pemenang(pemain_golf)
+    para_pemenang = pemenang(pemain_golf)
 
     # Animasi
-    # Mencari panjang nama pememnang
-    len_w = len(winner)
+    for juara in para_pemenang:
+        print(f'Juara {urut}:')
+        nama_juara = list(juara.keys())[0]
+        len_w = len(nama_juara)
 
-    # Lopping untuk print huruf acak dalam baris yang sama yang akan me-reveal nama pemenang
-    for i in range(15):
-        printerr(''.join(choice(ascii_letters)
-                         for _ in range(randint(1, len_w))).ljust(len_w), end='\r')
-        # sleep selama 0.1s untuk memperindah animasi
-        sleep(0.1)
+        # Lopping untuk print huruf acak dalam baris yang sama yang akan me-reveal nama pemenang
+        for i in range(15):
+            printerr(''.join(choice(ascii_letters)
+                             for _ in range(randint(1, len_w))).ljust(len_w), end='\r')
+            # sleep selama 0.1s untuk memperindah animasi
+            sleep(0.1)
 
-    # Print nama pemenang
-    print(winner)
+        # Print nama pemenang
+        print(nama_juara, '\n')
+
+        # Menambah nomor urut juara
+        urut += 1
 
 
 def print_judul():
