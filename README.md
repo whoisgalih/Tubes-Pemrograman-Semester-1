@@ -7,7 +7,7 @@
 | Dosen Pengenalan Pemrograman | Jimmy Tirtawangsa   |
 | Nomor Soal                   | 35                  |
 
-## Inputan:
+## Inputan dari Soal:
 
 ```
 PRAS PAR BR BR EG TR BG PAR CN ACE QD TR TR DB PAR TR BR EG AL
